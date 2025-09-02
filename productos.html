@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script>
+            let x,y,z;
+            x=5;
+            y=2;
+            z=x%y;
+            z += 2; //Z = Z + 2
+            z *= 3;
+            if (z > 0 && y == 2){
+                alert(z);
+            }
+            alert(typeof(z));
+            class Persona {};
+            const p = new Persona();
+            if (p instanceof Persona){
+                alert("es un persona")
+            } else {
+                alert("No es una persona");
+            }
+            if(z < 10){
+                console.log("Z es unitario");
+            } else if (z < 20){
+                console.log("Z es decimal");
+            } else {
+                console.log("Otro caso");
+            }
+            let text;
+            if (Math.random() < 0.5){
+                text = "Cara";
+            } else{
+                text = "Sello";
+            }
+            alert(text)
+            for (let i=0; i < 3; i++){ //for i in range(3)
+                console.log(i);
+            }
+            let j =0;
+            while (j < 3){
+                console.log(j);
+                j++;
+            }
+            let k = 0;
+            do{
+                console.log(k);
+                k++
+            } while (k < 3);
+            const cadenas = ["BMW","Volvo","Ford"];
+            let l = 0;
+            let tiposAutos = "";
+            for(;cadenas[l];){
+                tiposAutos = tiposAutos + " " + cadenas[l];
+                l++;
+            }
+            console.log(tiposAutos);
+            let m = 0;
+            let marcas = "";
+            while(cadenas[m]){
+                marcas += " " + cadenas[m];
+                m++
+            }
+            console.log(marcas);
+            let cadena = "Hola";
+            let cadena2 = "Hola2";
+            let w = x+y;
+            function saludar(){
+                try {
+                    alert("Hola");
+                    throw "Muy lento";
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p id="msg"></p>
+        <select name="comuna" id="com"></select>
+        <script>
+            console.log("Inicio primer codigo JavaScript")
+            document.getElementById("msg").innerText = "Hola World";
+            document.getElementById("com").innerHTML = '<option value="1">Santiago</option><option value="2">Valparaiso</option>';
+        </script>
+        <script>
+            document.write(3+4);
+        </script>
+        <button type="button" onclick="alert(4+7)">Escribe</button>
+        <button type="button" onclick="window.print()">Imprimir pagina</button>
+        <button type="button" onclick="saludar();">Saluda</button>
+    </body>
+</html>
